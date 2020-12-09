@@ -27,9 +27,10 @@ def randomWord():
     print("vous êtes tombé sur le mot ", Back.GREEN + alea)
     print(Style.RESET_ALL)
 
-def search (): #1.0
     
-    randomWord()
+def search (): #1.5
+    
+
     lettre = input("entrer la lettre à chercher.")
     nombre = 0
     for i in range (0, len(alea)-1):
@@ -43,7 +44,17 @@ def search (): #1.0
             print("cette lettre est apparu ",nombre," fois.")
         else:
             print("la lettre ",lettre," apparait à la ",position,"e position.")
-        
-search()
+
+
+
+randomWord()
+
+print(Style.RESET_ALL)
+guess = input("entrez un mot")
+for i in range (0, len(alea)-1):
+    if(guess[i]==alea[i]):
+        print(Back.RED + guess[i])
+    else:
+        print(Style.RESET_ALL + guess[i])
 
 input()
